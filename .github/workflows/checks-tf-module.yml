@@ -112,7 +112,7 @@ concurrency:
 jobs:
   # Call Terraform Base workflow (format & docs)
   terraform_base:
-    uses: acai-solutions/github-workflows/.github/workflows/tf-base.yml@test
+    uses: acai-solutions/github-workflows/.github/workflows/tf-base.yml@main
     with:
       concurrency_group: ${{ inputs.concurrency_group }}
       runner_type: ${{ inputs.runner_type }}
@@ -126,7 +126,7 @@ jobs:
     needs:
       - terraform_base
     if: ${{ always() && needs.terraform_base.result == 'success' }}
-    uses: acai-solutions/github-workflows/.github/workflows/tf-security.yml@test
+    uses: acai-solutions/github-workflows/.github/workflows/tf-security.yml@main
     with:
       concurrency_group: ${{ inputs.concurrency_group }}
       runner_type: ${{ inputs.runner_type }}
@@ -142,7 +142,7 @@ jobs:
 
   # Call Python Base workflow (if Python files exist)
   python_base:
-    uses: acai-solutions/github-workflows/.github/workflows/python-base.yml@test
+    uses: acai-solutions/github-workflows/.github/workflows/python-base.yml@main
     with:
       concurrency_group: ${{ inputs.concurrency_group }}
       runner_type: ${{ inputs.runner_type }}
