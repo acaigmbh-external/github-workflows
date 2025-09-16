@@ -56,3 +56,29 @@ See [LICENSE][license-url] for full details.
 [contributors-url]: https://github.com/acai-consulting/github-terraform-workflows/graphs/contributors
 [license-url]: https://github.com/acai-consulting/github-terraform-workflows/tree/master/LICENSE
 [github_workflows_link]: https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+No providers.
+
+## Modules
+
+No modules.
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
