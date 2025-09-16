@@ -1,0 +1,12 @@
+name: ACAI TERRAFORM MODULE
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tf_module_checks:
+    uses: acai-solutions/github-workflows/.github/workflows/checks-tf-module.yml@main
+    if: ${{ github.event_name == 'pull_request' }}
+    secrets: inherit
